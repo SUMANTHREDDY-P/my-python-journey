@@ -1,8 +1,11 @@
 import random
 computer=["rock","paper","scissors"]
 while True:
-    game = random.choice(computer)
     user = input("enter your choice : ").lower()
+    if user not in computer:
+        print("--Enter Valid Choice--")
+        break
+    game = random.choice(computer)
     if user == "q":
         print('--Thanks for playing--')
         break
@@ -10,22 +13,11 @@ while True:
     print('The computer chose : ', game)
     if user == game:
         print("you Draw ")
-    elif user == "rock":
-        if game == "scissors":
-            print("you win")
-        elif game == "paper":
-            print("you lose")
-    elif user == "scissors":
-        if game == "rock":
-            print("you lose")
-        elif game == "paper":
-            print("you win")
-    elif user == "paper":
-        if game == "scissors":
-            print("you lose")
-        elif game == "rock":
-            print("you win")
+    elif (user == "rock" and game == "scissors") or \
+         (user == "paper" and game == "rock") or \
+         (user == "scissors" and game == "paper"):
+        print("You Win")
     else:
-        print("-----Plese Enter Valide Choice------")
+        print("-----YOU LOSS------")
 
     print("press 'q' to exit")
