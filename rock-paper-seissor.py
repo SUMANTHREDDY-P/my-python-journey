@@ -4,7 +4,7 @@ while True:
     user = input("enter your choice : ").lower()
     if user not in computer:
         print("--Enter Valid Choice--")
-        break
+        continue
     game = random.choice(computer)
     if user == "q":
         print('--Thanks for playing--')
