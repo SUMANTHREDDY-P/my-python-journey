@@ -2,7 +2,7 @@ import random
 computer=["rock","paper","scissors"]
 while True:
     user = input("enter your choice : ").lower()
-    if user not in computer:
+    if user not in computer and user != 'q':
         print("--Enter Valid Choice--")
         continue
     game = random.choice(computer)
