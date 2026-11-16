@@ -1,4 +1,4 @@
-from datetime import datetime, timezone, timedelta
+from datetime import datetime
 import requests
 
 Key = "API_KEY"  # Replace with your actual OpenWeatherMap API key
